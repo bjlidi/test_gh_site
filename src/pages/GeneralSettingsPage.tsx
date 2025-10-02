@@ -13,7 +13,7 @@ const GeneralSettingsPage: React.FC = () => {
 
     const [isSubmitted, setIsSubmitted] = useState(false);
 
-    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
         setFormData(prev => ({
             ...prev,
@@ -41,14 +41,14 @@ const GeneralSettingsPage: React.FC = () => {
     };
 
     const resetForm = () => {
-        setFormData(prev => ({
+        setFormData({
             language: '',
             timezone: '',
             country: '',
             session: false,
             notifications: false,
             marketing: false,
-        }));
+        });
     };
 
     if (isSubmitted) {

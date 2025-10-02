@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import type { GeneralSettings } from '../types';
 
 const GeneralSettingsPage: React.FC = () => {
-    const [formData, setFormData] = useState<UserInfo>({
+    const [formData, setFormData] = useState<GeneralSettings>({
         language: '',
         timezone: '',
         country: '',
-        session: '',
-        notifications: '',
-        marketing: '',
+        session: false,
+        notifications: false,
+        marketing: false,
     });
 
     const [isSubmitted, setIsSubmitted] = useState(false);
@@ -24,11 +24,6 @@ const GeneralSettingsPage: React.FC = () => {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
 
-        if (formData.password) {
-            const buggyUrl = `/general-settings?submitted=true&password=${encodeURIComponent(formData.password)}&firstName=${encodeURIComponent(formData.firstName)}`;
-            window.history.pushState({}, '', buggyUrl);
-        }
-
         setIsSubmitted(true);
         setTimeout(() => {
             setIsSubmitted(false);
@@ -36,9 +31,9 @@ const GeneralSettingsPage: React.FC = () => {
                 language: '',
                 timezone: '',
                 country: '',
-                session: '',
-                notifications: '',
-                marketing: '',
+                session: false,
+                notifications: false,
+                marketing: false,
             });
             // Clear the buggy URL when resetting
             window.history.pushState({}, '', '/general-settings');
@@ -50,9 +45,9 @@ const GeneralSettingsPage: React.FC = () => {
             language: '',
             timezone: '',
             country: '',
-            session: '',
-            notifications: '',
-            marketing: '',
+            session: false,
+            notifications: false,
+            marketing: false,
         }));
     };
 

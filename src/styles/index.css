@@ -16,6 +16,7 @@
 /* Page Styles */
 @import './pages/tasks.css';
 @import './pages/user-info.css';
+@import './pages/general-settings.css';
 @import './pages/about-us.css';
 @import './pages/not-found.css';
 

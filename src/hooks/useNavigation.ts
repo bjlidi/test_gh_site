@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export type Page = 'userinfo' | 'tasks' | 'about' | 'notfound';
+export type Page = 'userinfo' | 'tasks' | 'about' | 'notfound' | 'generalsettings';
 
 export const useNavigation = (initialPage: Page = 'userinfo') => {
   const [currentPage, setCurrentPage] = useState<Page>(initialPage);
@@ -12,6 +12,7 @@ export const useNavigation = (initialPage: Page = 'userinfo') => {
   const navigateToTasks = () => navigateTo('tasks');
   const navigateToAbout = () => navigateTo('about');
   const navigateToUserInfo = () => navigateTo('userinfo');
+  const navigateToGeneralSettings = () => navigateTo('generalsettings');
   const navigateToNotFound = () => navigateTo('notfound');
 
   return {
@@ -21,5 +22,6 @@ export const useNavigation = (initialPage: Page = 'userinfo') => {
     navigateToAbout,
     navigateToUserInfo,
     navigateToNotFound,
+    navigateToGeneralSettings
   };
 };

@@ -26,6 +26,13 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onNavigate }) => {
                     <div className="nav-links">
                         <a
                             href="#"
+                            className={`nav-link ${currentPage === 'generalsettings' ? 'active' : ''}`}
+                            onClick={(e) => handleNavClick('generalsettings', e)}
+                        >
+                            General Settings
+                        </a>
+                        <a
+                            href="#"
                             className={`nav-link ${currentPage === 'userinfo' ? 'active' : ''}`}
                             onClick={(e) => handleNavClick('userinfo', e)}
                         >

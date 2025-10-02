@@ -142,7 +142,7 @@ const GeneralSettingsPage: React.FC = () => {
                             <input
                                 type="checkbox"
                                 name="sessionEmails"
-                                checked={formData.sessionEmails}
+                                checked={formData.session}
                                 onChange={handleInputChange}
                             />
                             Receive Session Emails
@@ -154,7 +154,7 @@ const GeneralSettingsPage: React.FC = () => {
                             <input
                                 type="checkbox"
                                 name="marketingEmails"
-                                checked={formData.marketingEmails}
+                                checked={formData.marketing}
                                 onChange={handleInputChange}
                             />
                             Receive Marketing Emails

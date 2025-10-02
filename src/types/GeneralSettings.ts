@@ -1,7 +1,7 @@
 export interface GeneralSettings {
-  language: String;
-  timezone: String;
-  country: String;
+  language: string;
+  timezone: string;
+  country: string;
   session: boolean;
   notifications: boolean;
   marketing: boolean;

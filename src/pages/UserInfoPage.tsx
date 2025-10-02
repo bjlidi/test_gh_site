@@ -219,17 +219,17 @@ const UserInfoPage: React.FC = () => {
                 </div>
 
                 <div className="form-actions">
+
+                    <button type="submit" className="btn btn-secondary">
+                        Save Information
+                    </button>
                     <button
                         type="button"
-                        className="btn btn-secondary"
+                        className="btn btn-primary"
                         onClick={resetForm}
                     >
                         Reset Form
                     </button>
-                    <button type="submit" className="btn btn-primary">
-                        Save Information
-                    </button>
-
                 </div>
             </form>
         </div>

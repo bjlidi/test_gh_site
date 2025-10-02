@@ -55,6 +55,14 @@
   font-size: var(--font-size-sm);
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: row-reverse
+}
+
+.form-label > input {
+  margin-left: 1em;
 }
 
 .required-asterisk {
